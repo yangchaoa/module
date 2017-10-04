@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        textarea{
+            text-indent: 2em;
+            font-size: 18px;
+            color: #04d605;
+        }
+        #btn{
+            color: #fff;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <input type="submit" id="btn">
+</form>
+<script type="text/javascript">
+    window.oninput=function(){
+        var oText=document.querySelector('#text');
+        var oBtn=document.querySelector('#btn');
+        if(oText.value.length>60||oText.value.length<1){
+            oBtn.disabled=true;
+            oBtn.style.background='red'
+        }else{
+            oBtn.disabled=false;
+            oBtn.style.background='green'
+        }
+    }
+
+</script>
+</body>
+</html>
